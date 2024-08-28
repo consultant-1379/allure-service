@@ -1,0 +1,47 @@
+.label-nodename-failed {
+    background-color: #D9534F;
+}
+.label-nodename-canceled {
+    background-color: #6A6A6A;
+}
+.label-nodename-broken {
+    background-color: #F0AD4E;
+}
+.label-nodename-pending {
+    background-color: #999999;
+}
+.label-nodename-passed {
+    background-color: #5CB85C;
+}
+
+.text-nodename-failed {
+    background-color: #D9534F;
+}
+
+.text-nodename-total {
+    color: #0C0C0C;
+}
+
+.text-nodename-canceled {
+    background-color: #6A6A6A;
+}
+.text-nodename-broken {
+    background-color: #F0AD4E;
+}
+.text-nodename-pending {
+    background-color: #999999;
+}
+.text-nodename-passed {
+    background-color: #5CB85C;
+}
+.table-condensed > tbody > tr > td.suite-title {
+    padding-left: 20px;
+    font-style: italic;
+}
+.nodename-icon {
+    width: 20px;
+    float: left;
+}
+.nodename-icon + span {
+    clear: left;
+}

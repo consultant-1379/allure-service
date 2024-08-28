@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    <bannerLeft>
+        <name>Allure Service</name>
+    </bannerLeft>
+
+    <publishDate position="right"/>
+    <version position="none"/>
+
+    <body>
+        <menu name="Allure Service">
+            <item name="Documentation" href="/index.html"/>
+            <item name="REST API" href="/rest_api.html"/>
+            <item name="Architecture" href="/architecture.html"/>
+            <item name="Installation" href="/installation.html"/>
+            <item name="Configuration" href="/configuration.html"/>
+            <item name="Plugins" href="/allure_plugins_nodeType.html"/>
+            <item name="FAQ" href="/faq.html"/>
+        </menu>
+    </body>
+
+    <skin>
+        <groupId>com.ericsson.cds</groupId>
+        <artifactId>ericsson-skin-stats</artifactId>
+        <version>1.1.0</version>
+    </skin>
+
+    <custom>
+        <uiStats>
+            <serverUrl>https://cds.ericsson.se/analytics/</serverUrl>
+            <siteId>12</siteId>
+        </uiStats>
+        <search>
+            <url>http://atclvm1170.athtem.eei.ericsson.se:8080/search/#searchapp</url>
+        </search>
+        <fluidoSkin>
+            <sourceLineNumbersEnabled>false</sourceLineNumbersEnabled>
+        </fluidoSkin>
+    </custom>
+
+</project>

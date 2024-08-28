@@ -1,0 +1,110 @@
+<div class="nodeNames b-island tab-content-fill" pane-set ng-if="suitesByNodeName.length > 0">
+    <div class="pane_col nodenames_list" pane pane-expanded="isState('nodeName')">
+        <div class="pane_overlay clickable" ui-sref="nodeName.suite"></div>
+        <div class="pane_content" ui-scrollfix-target>
+            <h3 class="pane__header defect_title node_name_header" ui-scrollfix inherit-width>
+                {{'nodeName.HEADER' | translate}}<br/>
+                <small>For information on how to get your testcases to appear here please see the <a
+                        href="	https://taf.seli.wh.rnd.internal.ericsson.com/Allure-Service/allure_plugins_nodeName.html">documentation
+                </a></small>
+            </h3>
+
+            <table allure-table class="nodename-list table table-hover table-condensed" sorting="sorting">
+                <tr ng-repeat-start="nodeName in list.items"
+                    class="suites-by-nodeName clickable"
+                    ng-click="expandnodeName(nodeName, !nodeName.expanded)"
+                    ng-class="{'nodeName_expanded': nodeName.expanded}">
+                    <td allure-table-col="{heading: '', predicate: 'nodeName.expanded', flex: 1}" class="text-center">
+
+                        <span class="nodename-icon">
+                            <span class="fa fa-plus clickable" ng-show="!nodeName.expanded"></span>
+                            <span class="fa fa-minus clickable" ng-show="nodeName.expanded"></span>
+                        </span>
+
+                    </td>
+                    <td allure-table-col="{heading: 'nodeName', flex: 20}"
+                        class="text-nodename-{{nodeName.nodeName|lowercase}}"
+                        title="{{nodeName.nodeName}}">
+                        {{nodeName.nodeName}}
+                    </td>
+                    <td allure-table-col="{heading: 'Failed', predicate: 'testCasesFailedCount', flex: 2, reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-failed" ng-show = "{{nodeName
+                        .testCasesFailedCount}}>0">{{nodeName
+                            .testCasesFailedCount}}</span>
+                    </td>
+                    <td allure-table-col="{heading: 'Broken', predicate: 'testCasesBrokenCount', flex: 2 , reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-broken" ng-show = "{{nodeName
+                        .testCasesBrokenCount}}>0">{{nodeName
+                            .testCasesBrokenCount}}</span>
+                    </td>
+                    <td allure-table-col="{heading: 'Canceled', predicate: 'testCasesCanceledCount', flex: 2, reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-canceled" ng-show = "{{nodeName
+                        .testCasesCanceledCount}}>0">{{nodeName
+                            .testCasesCanceledCount}}</span>
+                    </td>
+                    <td allure-table-col="{heading: 'Pending', predicate: 'testCasesPendingCount', flex: 2, reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-pending" ng-show = "{{nodeName
+                        .testCasesPendingCount}}>0">{{nodeName
+                            .testCasesPendingCount}}</span>
+                    </td>
+                    <td allure-table-col="{heading: 'Passed', predicate: 'testCasesPassedCount', flex: 2, reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-passed" ng-show = "{{nodeName
+                        .testCasesPassedCount}}>0">{{nodeName
+                            .testCasesPassedCount}}</span>
+                    </td>
+                    <td allure-table-col="{heading: 'Total', predicate: 'testCasesCount', flex: 2, reverse: true}"
+                        class="text-center">
+                        <span class="label text-nodename-total" ng-show ="{{nodeName
+                        .testCasesCount}}>0">{{nodeName
+                            .testCasesCount}}</span>
+                    </td>
+                </tr>
+                <tr ng-click="setSuite(compositeKey)"
+                    class="suite clickable"
+                    ng-if="nodeName.expanded"
+                    ng-repeat="(compositeKey, suite) in nodeName.suitesMap"
+                    ng-class="{active: isActiveSuite(suite)}">
+                    <td></td>
+                    <td class="suite-title" title="{{suite.title}}">{{suite.title}}</td>
+                    <td class="text-center" >
+                        <span class="label text-nodename-failed" ng-hide="suite.failedCount==0">{{suite.failedCount}}</span></td>
+                    <td class="text-center" >
+                        <span class="label text-nodename-broken"ng-hide="suite.brokenCount==0">{{suite.brokenCount}}</span></td>
+                    <td class="text-center" >
+                        <span class="label text-nodename-canceled" ng-hide="suite.canceledCount==0">{{suite.canceledCount}}</span></td>
+                    <td class="text-center" >
+                        <span class="label text-nodename-pending" ng-hide="suite.pendingCount==0">{{suite.pendingCount}}</span></td>
+                    <td class="text-center" >
+                        <span class="label text-nodename-passed" ng-hide="suite.passedCount==0">{{suite.passedCount}}</span></td>
+                    <td class="text-center" >
+                        {{suite.totalCount}}</td>
+                </tr>
+                <tr ng-repeat-end></tr>
+            </table>
+        </div>
+    </div>
+    <div class="testCases-pane pane_col" ng-if="suite" pane pane-expanded="isState('nodeName.suite.expanded')">
+        <div class="pane_overlay clickable" ui-sref="nodeName.suite.testcase"></div>
+        <div class="pane_content">
+            <h3 class="pane__header text-nodename-{{nodeName.nodeName|lowercase}}">
+                <div class="pane__header_controls pull-right">
+                    <span class="fa fa-expand clickable" tooltip="{{'tooltip.EXPAND' | translate}}"
+                          ng-hide="isState('nodeName.suite.expanded')" ui-sref="nodeName.suite.expanded"></span>
+                    <span class="fa fa-compress clickable" tooltip="{{'tooltip.COLLAPSE' | translate}}"
+                          ng-show="isState('nodeName.suite.expanded')" ui-sref="nodeName.suite"></span>
+                    <span class="fa fa-close clickable" tooltip="{{'tooltip.CLOSE' | translate}}"
+                          ui-sref="nodeName"></span>
+                </div>
+                {{suite.title}}
+            </h3>
+            <div status-switcher statuses="showStatuses" class="pull-right" statistic="suite.statistic"></div>
+            <div testcases-list="suite.testCases" statuses="showStatuses" selected-uid="testcase.uid"></div>
+        </div>
+    </div>
+    <div ui-view="testcase"></div>
+</div>

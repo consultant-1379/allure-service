@@ -1,0 +1,44 @@
+# http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties
+spring:
+    profiles.active: dev
+    main.banner-mode: "off"
+    jackson:
+        date-format: yyyy-MM-dd'T'HH:mm:ss.SSS
+        serialization:
+            INDENT_OUTPUT: true
+
+endpoints:
+    jmx.enabled: false
+    actuator.enabled: false
+    jolokia.enabled: false
+
+management:
+    port: 8081
+
+server:
+    port: 8080
+    sessionTimeout: 5000
+    error.whitelabel.enabled: false
+
+info.build:
+    version: @project.version@
+    name: @project.name@
+    groupId: @project.groupId@
+    artifact: @project.artifactId@
+    date: @buildDate@
+
+jobs:
+    cleanup:
+        cron: 0 */10 * * * *
+        report.lifetime:
+            completed.hours: 1
+            uncompleted.hours: 24
+
+refresh:
+    cron: 0 */10 * * * *
+
+upload:
+    path: ${java.io.tmpdir}
+    dir.name: reports_${random.uuid}
+
+copy.ignore.file: report.zip

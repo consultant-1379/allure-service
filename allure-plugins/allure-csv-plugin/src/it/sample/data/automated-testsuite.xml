@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1438694906540" stop="1438694909662" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Parametrized Tests</name>
+    <title>Parametrized Tests</title>
+    <test-cases>
+        <test-case start="1438694907945" stop="1438694908070" status="passed">
+            <name>UNKNOWN_ID</name>
+            <title>UNKNOWN_ID[UNKNOWN_ID,1,String]</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="IE00115341"/>
+                <label name="thread" value="Parametrized Tests.1"/>
+            </labels>
+            <parameters>
+                <parameter name="Test ID" value="UNKNOWN_ID" kind="argument"/>
+                <parameter name="#" value="1" kind="argument"/>
+                <parameter name="Expected value" value="String" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1438694908539" stop="1438694908540" status="passed">
+            <name>WARNING: EMPTY TEST ID</name>
+            <title>WARNING: EMPTY TEST ID[,2,]</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="IE00115341"/>
+                <label name="thread" value="Parametrized Tests.1"/>
+            </labels>
+            <parameters>
+                <parameter name="Test ID" value="" kind="argument"/>
+                <parameter name="#" value="2" kind="argument"/>
+                <parameter name="Expected value" value="" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1438694908856" stop="1438694908857" status="passed">
+            <name>TORF-37961_Func-2</name>
+            <title>UPDATED_Verify that an error message is displayed after an unsuccessful login attempt[TORF-37961_Func-2,3,Long text here very long text here very lo...]</title>
+            <description type="text">Test case verifies if an error message is displayed after an unsuccessful login attempt</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="IE00115341"/>
+                <label name="thread" value="Parametrized Tests.1"/>
+                <label name="story" value="TORF-10397: As a TOR SSO user, I want an alternative authentication solution so that I can log into the TOR launcher when TOR SSO is uninstalled or down"/>
+                <label name="group" value="KGB"/>
+                <label name="group" value="RFA"/>
+                <label name="feature" value="Login Page"/>
+                <label name="severity" value="normal"/>
+                <label name="execution_type" value="automated"/>
+                <label name="testId" value="TORF-37961_Func-2"/>
+                <label name="sprint" value="15.11;15.12"/>
+            </labels>
+            <parameters>
+                <parameter name="Test ID" value="TORF-37961_Func-2" kind="argument"/>
+                <parameter name="#" value="3" kind="argument"/>
+                <parameter name="Expected value" value="Long text here very long text here very long text here very long text here very long text here very long text here very long text here very long text here very long text here very long text here very long text here very" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1438694909238" stop="1438694909239" status="passed">
+            <name>TORF-37961_Func-2</name>
+            <title>UPDATED_Verify that an error message is displayed after an unsuccessful login attempt[TORF-37961_Func-2,4,Something]</title>
+            <description type="text">Test case verifies if an error message is displayed after an unsuccessful login attempt</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="IE00115341"/>
+                <label name="thread" value="Parametrized Tests.1"/>
+                <label name="story" value="TORF-10397: As a TOR SSO user, I want an alternative authentication solution so that I can log into the TOR launcher when TOR SSO is uninstalled or down"/>
+                <label name="group" value="KGB"/>
+                <label name="group" value="RFA"/>
+                <label name="feature" value="Login Page"/>
+                <label name="severity" value="normal"/>
+                <label name="execution_type" value="automated"/>
+                <label name="testId" value="TORF-37961_Func-2"/>
+                <label name="sprint" value="15.12"/>
+            </labels>
+            <parameters>
+                <parameter name="Test ID" value="TORF-37961_Func-2" kind="argument"/>
+                <parameter name="#" value="4" kind="argument"/>
+                <parameter name="Expected value" value="Something" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1438694909639" stop="1438694909640" status="passed">
+            <name>TORF-37961_Func-2</name>
+            <title>UPDATED_Verify that an error message is displayed after an unsuccessful login attempt[TORF-37961_Func-2,5,Some Value]</title>
+            <description type="text">Test case verifies if an error message is displayed after an unsuccessful login attempt</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="IE00115341"/>
+                <label name="thread" value="Parametrized Tests.1"/>
+                <label name="story" value="TORF-10397: As a TOR SSO user, I want an alternative authentication solution so that I can log into the TOR launcher when TOR SSO is uninstalled or down"/>
+                <label name="group" value="RFA"/>
+                <label name="group" value="KGB"/>
+                <label name="feature" value="Login Page"/>
+                <label name="severity" value="normal"/>
+                <label name="execution_type" value="automated"/>
+                <label name="testId" value="TORF-37961_Func-2"/>
+                <label name="sprint" value="15.12;15.13"/>
+            </labels>
+            <parameters>
+                <parameter name="Test ID" value="TORF-37961_Func-2" kind="argument"/>
+                <parameter name="#" value="5" kind="argument"/>
+                <parameter name="Expected value" value="Some Value" kind="argument"/>
+            </parameters>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TAF"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

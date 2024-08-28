@@ -1,0 +1,15 @@
+.exportButton {
+  cursor: pointer;
+}
+
+.csvExportTextHeader {
+  float: left;
+}
+
+.csvExportButton {
+  float: right;
+}
+
+.csvExportButtonIcon {
+  margin-left: 5px;
+}

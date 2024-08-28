@@ -1,0 +1,71 @@
+<div class="csvExport b-island tab-content-fill" pane-set>
+    <div class="pane_col" pane pane-expanded="true" ng-class="{'pane_col-overlay': !isState('csvExport')}">
+        <div class="pane_overlay clickable" ui-sref="csvExport"></div>
+        <div class="pane_content">
+            <div class="b-island__title">Export Data</div>
+            <div>
+                <h3 class="pane__header csvExportTextHeader">Test Case Results</h3>
+                <div class="btn-group csvExportButton">
+                    <span class="btn btn-default" ng-csv="getArray()" filename="test.csv">CSV<i class="fa fa-floppy-o csvExportButtonIcon"></i></span>
+                </div>
+            </div>
+            <table allure-table class="test-list table table-hover table-condensed" sorting="sorting">
+                <tbody>
+                <tr ng-repeat-start="row in exportData.items" class="feature clickable" ng-class="{'feature_expanded': feature.expanded}">
+                    <td allure-table-col="{heading:'Title', predicate: 'title', flex: 3}" class="line-ellipsis" title="{{row.title}}">
+                        {{row.title}}
+                    </td>
+                    <td allure-table-col="{heading: 'Suite', predicate: 'suite', class:'text-center', reverse: true}" title="{{row.suite}}" class="text-center">
+                        {{row.suite}}
+                    </td>
+
+                    <td allure-table-col="{heading:'Duration', predicate: 'time.duration', class:'text-right', flex: 1.5, reverse: true}"  class="line-ellipsis text-right" title="{{row.time.duration | time}}">
+                        {{row.time.duration | time}}
+                    </td>
+
+                    <td allure-table-col="{heading: 'Component', predicate: 'component', class:'text-center', reverse: true}" title="{{row.component}}" class="line-ellipsis">
+                        {{row.component}}
+                    </td>
+                    <td allure-table-col="{heading: 'Node Name', predicate: 'nodeName', class:'text-center', reverse: true}" title="{{row.nodeName}}" class="line-ellipsis">
+                        {{row.nodeName}}
+                    </td>
+                    <td allure-table-col="{heading: 'Node Type', predicate: 'nodeType', class:'text-center', reverse: true}" title="{{row.nodeType}}" class="line-ellipsis">
+                        {{row.nodeType}}
+                    </td>
+                    <td allure-table-col="{heading: 'Team Name', predicate: 'teamName', class:'text-center', reverse: true}" title="{{row.teamName}}" class="line-ellipsis">
+                        {{row.teamName}}
+                    </td>
+                    <td allure-table-col="{heading: 'Result', predicate: 'result', class:'text-center', reverse: true}" title="{{row.result}}" class="line-ellipsis">
+                        {{row.result}}
+                    </td>
+                    <td allure-table-col="{heading: 'Group', predicate: 'group', class:'text-center', reverse: true}" title="{{row.group}}" class="line-ellipsis">
+                        {{row.group}}
+                    </td>
+                    <td allure-table-col="{heading: 'Requirement', predicate: 'requirement', class:'text-center', reverse: true}" title="{{row.requirement}}" class="line-ellipsis">
+                        {{row.requirement}}
+                    </td>
+                    <td allure-table-col="{heading: 'Sprint', predicate: 'sprint', class:'text-center', reverse: true}" title="{{row.sprint}}" class="line-ellipsis">
+                        {{row.sprint}}
+                    </td>
+                    <td allure-table-col="{heading: 'Defect', predicate: 'defect', class:'text-center', reverse: true}" title="{{row.defect}}" class="line-ellipsis">
+                        {{row.defect}}
+                    </td>
+                    <td allure-table-col="{heading: 'Comment', predicate: 'comment', class:'text-center', reverse: true}" title="{{row.comment}}" class="line-ellipsis">
+                        {{row.comment}}
+                    </td>
+                    <td allure-table-col="{heading: 'Execution Type', predicate: 'executionType', class:'text-center', reverse: true}" title="{{row.executionType}}" class="text-center">
+                        {{row.executionType}}
+                    </td>
+                    <td allure-table-col="{heading: 'Priority', predicate: 'priority', class:'text-center', reverse: true}" title="{{row.priority}}" class="text-center">
+                        {{row.priority}}
+                    </td>
+                </tr>
+                <tr ng-repeat-end></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div ui-view="testcase"></div>
+</div>
+
+

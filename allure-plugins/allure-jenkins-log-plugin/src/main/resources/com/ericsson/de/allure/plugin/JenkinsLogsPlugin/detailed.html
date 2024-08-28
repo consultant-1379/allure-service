@@ -1,0 +1,19 @@
+<div class="b-island__title">Jenkins Log detailed view</div>
+<div class="attachment">
+    <div class="pane__header">
+        <h3>
+            <div class="pane__header_controls pull-right">
+                <span class="fa fa-expand clickable" tooltip="{{'tooltip.EXPAND' | translate}}"
+                      ng-hide="isState('jenkins-logs.detailed.expanded')" ng-click="go('jenkins-logs.detailed.expanded')"></span>
+                <span class="fa fa-compress clickable" tooltip="{{'tooltip.COLLAPSE' | translate}}"
+                      ng-show="isState('jenkins-logs.detailed.expanded')" ng-click="go('jenkins-logs.detailed')"></span>
+                <span class="fa fa-close clickable" tooltip="{{'tooltip.CLOSE' | translate}}" ng-click="go('jenkins-logs')"></span>
+            </div>
+            {{source}}
+        </h3>
+        <a class="text-muted" ng-href="{{getSourceUrl(logName)}}">{{source}}</a>
+    </div>
+    <div class="attachment_body">
+        <pre><code>{{attachText}}</code></pre>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+version: "3"
+services:
+    config:
+        image: armdocker.rnd.ericsson.se/proj_allure_service/allure-service-config-server:${ALLURE_VERSION}
+        container_name: "config"
+        volumes:
+            - .:/var/allure-service/config
+        ports:
+            - "8888"
+        environment:
+            - SPRING_PROFILES_ACTIVE=native,dev
+        networks:
+            - default
+    backend:
+        image: armdocker.rnd.ericsson.se/proj_allure_service/allure-service:${ALLURE_VERSION}
+        container_name: "backend"
+        volumes:
+            - /var/log/allure-service:/var/log/allure-service
+        ports:
+            - "8080"
+            - "8081"
+        environment:
+            - SPRING_PROFILES_ACTIVE=test
+            - spring.cloud.config.uri=http://config:8888
+            - endpoints.actuator.enabled=true
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:8080/api"]
+            interval: 30s
+            retries: 3
+        depends_on:
+          - "config"
+        networks:
+            - default
+    nginx:
+        image: armdocker.rnd.ericsson.se/proj_allure_service/allure-nginx:${ALLURE_VERSION}
+        container_name: "nginx"
+        ports:
+            - "80:80"
+            - "81:81"
+            - "443:443"
+        healthcheck:
+            test: ["CMD", "ping", "-c1", "localhost"]
+            interval: 20s
+            retries: 3
+        depends_on:
+            - "backend"
+        networks:
+            - outside
+            - default
+    cAdvisor:
+        image: google/cadvisor:latest
+        container_name: "cAdvisor"
+        stdin_open: true
+        volumes:
+            - /:/rootfs:ro
+            - /var/run:/var/run:rw
+            - /sys:/sys:ro
+            - /var/lib/docker/:/var/lib/docker:ro
+        tty: true
+        ports:
+            - 9090:8080
+        networks:
+            - outside
+            - default
+networks:
+    outside:
+        external: true

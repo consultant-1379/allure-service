@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1492668830359" stop="1492668830359" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Failed to get executed</name>
+    <title>Failed to get executed</title>
+    <test-cases>
+        <test-case start="1492668830359" stop="1492668830359" status="broken">
+            <name>AutoProvisioning.xml</name>
+            <title>AutoProvisioning.xml</title>
+            <labels>
+                <label name="severity" value="blocker"/>
+            </labels>
+            <failure>
+                <message>Suite "AutoProvisioning.xml" is skipped due to failed execution</message>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

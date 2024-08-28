@@ -1,0 +1,62 @@
+#%RAML 1.0
+---
+title: Allure Microservice REST API
+documentation:
+  - title : License
+    content : !include demo/license.txt
+
+/reports:
+    /{reportId}:
+        put:
+            description: |
+                Creates or updates single XML result as ZIP content.
+                Use the "binary/octet-stream" content type to specify the content from any consumer (excepting web-browsers).
+            body:
+                application/octet-stream:
+            responses:
+                201:
+                    description: File was successfully uploaded and created
+                200:
+                    description: File was successfully uploaded and replaced existing file
+        get:
+            description: |
+                Retrieves ZIP archive of HTML report with `reportId = {reportId}`.
+            responses:
+                404:
+                    description: No report found. Need to upload XML results first.
+                    body:
+                        application/json:
+                            example: |
+                                {"message": "Report not found"}
+                200:
+                    description: Zipped Allure report
+                    body:
+                        application/octet-stream:
+    /combined:
+        /{reportId}:
+            get:
+                queryParameters:
+                    executionId:
+                      type: string
+                      repeat: true
+                      required: true
+                description: |
+                    Retrieves ZIP archive of HTML report with `reportId = {reportId}` which contains all the results for the given executionId(s)
+                responses:
+                    404:
+                        description: At least one of the execution ids given were not found.
+                        body:
+                            application/json:
+                                example: |
+                                    {
+                                        "message": "Execution id(s) not found",
+                                        "executionIdsNotFound": ["...", "...", "..."]
+                                    }
+                    201:
+                        description: Combined report was successfully created.
+                        body:
+                            application/octet-stream:
+                    200:
+                        description: Combined report was successfully created and replaced existing report.
+                        body:
+                            application/octet-stream:

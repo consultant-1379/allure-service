@@ -1,0 +1,47 @@
+.label-nodetype-failed {
+    background-color: #D9534F;
+}
+.label-nodetype-canceled {
+    background-color: #6A6A6A;
+}
+.label-nodetype-broken {
+    background-color: #F0AD4E;
+}
+.label-nodetype-pending {
+    background-color: #999999;
+}
+.label-nodetype-passed {
+    background-color: #5CB85C;
+}
+
+.text-nodetype-failed {
+    background-color: #D9534F;
+}
+
+.text-nodetype-total {
+    color: #0C0C0C;
+}
+
+.text-nodetype-canceled {
+    background-color: #6A6A6A;
+}
+.text-nodetype-broken {
+    background-color: #F0AD4E;
+}
+.text-nodetype-pending {
+    background-color: #999999;
+}
+.text-nodetype-passed {
+    background-color: #5CB85C;
+}
+.table-condensed > tbody > tr > td.suite-title {
+    padding-left: 20px;
+    font-style: italic;
+}
+.nodetype-icon {
+    width: 20px;
+    float: left;
+}
+.nodetype-icon + span {
+    clear: left;
+}

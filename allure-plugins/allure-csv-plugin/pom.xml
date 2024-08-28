@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.de</groupId>
+        <artifactId>allure-plugins</artifactId>
+        <version>1.3.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>allure-csv-plugin</artifactId>
+    <name>Allure CSV plugin</name>
+
+    <properties>
+        <plugin.name>com/ericsson/de/allure/plugin/CsvExportPlugin</plugin.name>
+        <plugin.resources.directory>${project.build.outputDirectory}/${plugin.name}</plugin.resources.directory>
+        <plugin.dependencies.directory>${project.build.directory}/classes/webjars</plugin.dependencies.directory>
+
+        <!--3PP JS Libraries START-->
+        <ng-csv.file>ng-csv.min.js</ng-csv.file>
+        <ng-sanitize.file>angular-sanitize.min.js</ng-sanitize.file>
+        <!--3PP JS Libraries END -->
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-report-plugin-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.de</groupId>
+            <artifactId>allure-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <!-- Tests -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>allure-plugins</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-invoker-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <configuration>
+                    <jswarn>false</jswarn>
+                    <failOnWarning>false</failOnWarning>
+                    <aggregations>
+                        <aggregation>
+                            <insertNewLine>true</insertNewLine>
+                            <output>${plugin.resources.directory}/script.js</output>
+                            <includes>
+                                <!--3PP Library includes-->
+                                <include>${plugin.dependencies.directory}/${ng-csv.file}</include>
+                                <include>${plugin.dependencies.directory}/${ng-sanitize.file}</include>
+
+                                <include>${plugin.resources.directory}/script-min.js</include>
+                            </includes>
+                        </aggregation>
+                    </aggregations>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>concat-js</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

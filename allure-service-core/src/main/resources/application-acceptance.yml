@@ -1,0 +1,4 @@
+spring:
+    profiles.active: acceptance
+
+upload.dir.name: reports_acceptance

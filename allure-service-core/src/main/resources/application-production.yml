@@ -1,0 +1,6 @@
+spring:
+    profiles.active: production
+
+upload:
+    path: /var
+    dir.name: allure-reports

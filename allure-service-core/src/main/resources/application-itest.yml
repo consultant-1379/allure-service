@@ -1,0 +1,4 @@
+spring:
+    profiles.active: itest
+
+upload.dir.name: reports_itest

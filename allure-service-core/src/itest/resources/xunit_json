@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1491386444066,
+    "stop" : 1491386526799,
+    "duration" : 82733
+  },
+  "testSuites" : [ {
+    "uid" : "e35d89fa640f8249",
+    "name" : "success",
+    "title" : "success",
+    "time" : {
+      "start" : 1491386444066,
+      "stop" : 1491386526799,
+      "duration" : 82733
+    },
+    "statistic" : {
+      "total" : 3,
+      "passed" : 3,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "a964b9db7d06fac5",
+      "name" : "TORF-507",
+      "title" : "Testing TE integration with TMS",
+      "time" : {
+        "start" : 1491386526377,
+        "stop" : 1491386526799,
+        "duration" : 422
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

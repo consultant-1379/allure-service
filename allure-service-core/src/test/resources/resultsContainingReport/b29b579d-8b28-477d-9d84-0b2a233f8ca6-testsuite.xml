@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1492668821548" stop="1492668823324" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>AutoProvisioning - Odin_ScrumU</name>
+    <title>AutoProvisioning - Odin_ScrumU</title>
+    <test-cases>
+        <test-case start="1492668821548" stop="1492668823322" status="broken">
+            <name>AutoProvisioning - Odin_ScrumU</name>
+            <title>AutoProvisioning - Odin_ScrumU</title>
+            <failure>
+                <message>Test suite was interrupted, some test cases may be lost</message>
+            </failure>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TAF"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1438692419667" stop="1438692419920" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Manual Test Plan: 32</name>
+    <title>Manual: RV 4.1.10 CSL</title>
+    <description type="markdown">## Test Suite
+Test Plan: [32](https://taftm.seli.wh.rnd.internal.ericsson.com/#tm/viewTestPlan/32)
+Environment: **RV NPT and RV**
+Project: **EQEV: ASSURE**
+&gt; Test Cases for RV 4.10.10 CSL
+
+___
+</description>
+    <test-cases>
+        <test-case start="1438692419739" stop="1438692419752" status="passed">
+            <name>CSL Firmware Checks</name>
+            <title>CSL Firmware Checks</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-11604](EQEV-11604) 
+Type: **Functional**
+Component: **RV CSL**
+Execution Status: **Pass**
+### Description
+&gt; 
+&gt; 
+&gt; Check all deployments to make sure we are at the correct Firmware
+&gt; 
+&gt; Firmware Handling Guide for HP EMC
+&gt; 
+&gt; http://gask2web.ericsson.se/pub/get?DocNo=1/0225-AOM901092&amp;Lang=EN&amp;Rev=C8&amp;Format=PDFV1R4
+&gt; 
+
+### Comment
+&gt; Firmware is checked against version C9 of the Flare and Firmware guide, latest version will be dropping onto G:
+
+### Precondition
+&gt; Please check for latest Firmware guide
+
+</description>
+            <steps>
+                <step start="1438692419743" stop="1438692419745" status="passed">
+                    <name>Firmware check CSL</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419743" stop="1438692419745" status="passed">
+                            <name>Check all deployments to make sure we are at the correct FirmwareFirmware Handling Guide for HP EMChttp://gask2web.ericsson.se/pub/get?DocNo=1/0225-AOM901092&amp;Lang=EN&amp;Rev=C8&amp;Format=PDFV1R4</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL Firmware Checks"/>
+                <label name="story" value="EQEV-11604: null"/>
+                <label name="feature" value="RV CSL"/>
+                <label name="comment" value="Firmware is checked against version C9 of the Flare and Firmware guide, latest version will be dropping onto G:"/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419765" stop="1438692419766" status="passed">
+            <name>Firmware version check on CSL</name>
+            <title>Firmware version check on CSL</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-16604](EQEV-16604) 
+Type: **Functional**
+Component: **RV CSL**
+Test Status: **Approved**
+Execution Status: **Pass**
+### Description
+&gt; 
+&gt; 
+&gt; Check all deployments to make sure we are at the correct Firmware
+&gt; 
+&gt; Firmware Handling Guide for HP EMC
+&gt; 
+&gt; http://gask2web.ericsson.se/pub/get?DocNo=1/0225-AOM901092&amp;Lang=EN&amp;Rev=C8&amp;Format=PDFV1R4
+&gt; 
+
+### Comment
+&gt; Firmware versions comply to version C8 of the FLARE &amp; Firmware Handling Guide.
+
+### Precondition
+&gt; Check latest version of Doc
+
+</description>
+            <steps>
+                <step start="1438692419765" stop="1438692419765" status="passed">
+                    <name>Check Firmware version</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419765" stop="1438692419765" status="passed">
+                            <name>Check all deployments to make sure we are at the correct FirmwareFirmware Handling Guide for HP EMChttp://gask2web.ericsson.se/pub/get?DocNo=1/0225-AOM901092&amp;Lang=EN&amp;Rev=C8&amp;Format=PDFV1R4</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="Firmware version check on CSL"/>
+                <label name="story" value="EQEV-16604: null"/>
+                <label name="feature" value="RV CSL"/>
+                <label name="comment" value="Firmware versions comply to version C8 of the FLARE &amp; Firmware Handling Guide."/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.12"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419777" stop="1438692419778" status="passed">
+            <name>Upgrade go CSL 4.1.9</name>
+            <title>Upgrade go CSL 4.1.9</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Pass**
+### Description
+&gt; Below is general information on CSL. This is what is required.
+&gt; 
+&gt; 1. Simulator must run â€“ we support rolling upgrade, so we should be still getting some data out during upgrade:
+&gt; â€¢ LITP MS upgrade: data out
+&gt; â€¢ PM Stream upgrade: no data out at all
+&gt; â€¢ CSL EPS upgrade: data out for the CSL EPS blade that is not upgrading
+&gt; â€¢ CSL Topology upgrade: data out
+&gt; 2. We support 25K CSL/s until drop 7 when it goes to 50K CSL/s; hardware will need to change then
+&gt; 
+&gt; More info
+&gt; 
+&gt; *****************************************************************************************************************************
+&gt; HI Tadhg
+&gt; 
+&gt; As we are now moving into upgrade as part of next release I have some questions to raise.
+&gt; 
+&gt; 1.	Do we have any KPI roll back ?
+&gt; [etaddea] No KPI â€“ this Linux functionality, completely out of our control.
+&gt; 
+&gt; Also just taking information on you sent on:
+&gt; Just to clarify a bit with an example â€“ for a 4 blade deployment (1 PM Stream, 1 CSL Topology, 2 CSL EPS), assuming the following order of upgrade for the blades, then the following output should be seen while that particular blade is upgrading
+&gt; 
+&gt; Assuming the system is generating 1000 CSL/s
+&gt; -	CSL Topology upgrading: output should be 1000 CSL/s
+&gt; -	PM Stream upgrading: output should be 0 CSL/s
+&gt; -	CSL EPS 1 upgrading: output should be 500 CSL/s
+&gt; -	CSL EPS 2 upgrading: output should be 500 CSL/s
+&gt; -	Upgrade complete: output should be 1000 CSL/s
+&gt; 
+&gt; 
+&gt; Can you generate KPI or Char for above.
+&gt; [etaddea] Donâ€™t have one, other than CSL-M should produce data at volume that is &lt;= than the normal volume. The output at any point in the upgrade is completely dependent on which blade is upgrading and the order of upgrade is randomâ€¦
+&gt; 
+&gt; 
+&gt; ****************************************************************************************************************************
+&gt; 
+&gt; Other Jira that need to checked.
+&gt; EQEV-13499
+&gt; EQEV-13474
+
+### Precondition
+&gt; This may change for 4.1.9 + may need review
+
+</description>
+            <steps>
+                <step start="1438692419777" stop="1438692419777" status="passed">
+                    <name>Upgrade info</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419777" stop="1438692419777" status="passed">
+                            <name>1. Simulator must run â€“ we support rolling upgrade, so we should be still getting some data out during upgrade:â€¢ LITP MS upgrade: data outâ€¢ PM Stream upgrade: no data out at allâ€¢ CSL EPS upgrade: data out for the CSL EPS blade that is not upgradingâ€¢ CSL Topology upgrade: data out2. We support 25K CSL/s until drop 7 when it goes to 50K CSL/s; hardware will need to change then</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="Upgrade go CSL 4.1.9"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="normal"/>
+                <label name="sprint" value="15.13"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419802" stop="1438692419803" status="pending">
+            <name>KPI-CSL LITP MS Install of the LITP MS is less then 30 minutes</name>
+            <title>KPI-CSL LITP MS Install of the LITP MS is less then 30 minutes</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Performance**
+Component: **INFERNO**
+### Description
+&gt; 
+&gt; 
+&gt; Requirement: LITP MS Upgrade of the LITP MS shall take no longer than y minutes
+&gt; 
+&gt; Time from LITP below;
+&gt; 
+&gt; The installation of the LITP platform to the point where the deployment is ready to install application software is approximately 4 hours in 13B. This is the time to install the LITP LMS and boot up the peer nodes. This excludes prep work such as filling in the Site Engineering Document.
+&gt; 
+&gt; -The upgrade of the LITP LMS itself is fairly low key. Itâ€™s basically an yum install of some new rpms so itâ€™s in the order of minutes.
+&gt; -The upgrade of the underlying LITP platform running on the peer nodes can take up to 2 hours â€“ this is the worst case scenario where each node is taken out of the cluster one by one for an upgrade, then re-joins cluster and the next node is removed. This is dependent on the number of nodes in the cluster. We have 2 in 13B.
+&gt; -The upgrade of the running application software on the peer nodes took up to 3 hours in 13B.
+&gt; 
+&gt; Regards,
+&gt; 
+
+### Precondition
+&gt; From state must be outlined
+
+</description>
+            <failure>
+                <message>No execution result defined in TMS</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419802" stop="1438692419802" status="passed">
+                    <name>KPI-CSL Upgrade of LITP</name>
+                    <steps>
+                        <step start="1438692419802" stop="1438692419802" status="passed">
+                            <name>VRequirement: LITP MS Upgrade of the LITP MS shall take no longer than y minutesTime from LITP below;The installation of the LITP platform to the point where the deployment is ready to install application software is approximately 4 hours in 13B. This is the time to install the LITP LMS and boot up the peer nodes. This excludes prep work such as filling in the Site Engineering Document.-The upgrade of the LITP LMS itself is fairly low key. Itâ€™s basically an yum install of some new rpms so itâ€™s in the order of minutes.-The upgrade of the underlying LITP platform running on the peer nodes can take up to 2 hours â€“ this is the worst case scenario where each node is taken out of the cluster one by one for an upgrade, then re-joins cluster and the next node is removed. This is dependent on the number of nodes in the cluster. We have 2 in 13B.-The upgrade of the running application software on the peer nodes took up to 3 hours in 13B.erify Step description</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="KPI-CSL LITP MS Install of the LITP MS is less then 30 minutes"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.14"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419810" stop="1438692419810" status="passed">
+            <name>CSL-Functional CSL CSV creation</name>
+            <title>CSL-Functional CSL CSV creation</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Pass**
+### Description
+&gt; The following test has been created for the checking of the CSV file been created by CSL.  
+&gt; 
+&gt; 
+
+### Comment
+&gt; CSL-files created by CSL-M for every 5 min ROP.
+
+### Precondition
+&gt; Full load must be running
+
+</description>
+            <steps>
+                <step start="1438692419810" stop="1438692419810" status="passed">
+                    <name>CSL-Functional CSL CSV creation</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419810" stop="1438692419810" status="passed">
+                            <name>if you are using the none hadoop system. Â go to the csl box. Â cd /ericsson/data/northbound/1/ Â Do a ls -lrt and make open the later directory created. Â there should be a csv files created. Â wait for 5 minutes and check the next directory</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start="1438692419810" stop="1438692419810" status="passed">
+                            <name>verify files is generated</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL-Functional CSL CSV creation"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value="CSL-files created by CSL-M for every 5 min ROP."/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="normal"/>
+                <label name="sprint" value="15.12;15.13;15.14"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419821" stop="1438692419821" status="passed">
+            <name>CSL-Functional Checking error logs EPS instances</name>
+            <title>CSL-Functional Checking error logs EPS instances</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Pass**
+### Description
+&gt; CSL-Functional Checking error logs EPS instances.  This test is to verify that there is no errors EPS logs that are not covered by either fault or know issue
+
+### Precondition
+&gt; Full load must be running on sytem
+
+</description>
+            <steps>
+                <step start="1438692419821" stop="1438692419821" status="passed">
+                    <name>CSL-Functional Checking error logs EPS instances</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419821" stop="1438692419821" status="passed">
+                            <name>Browse to the following on all CSL Blades.Â /var/ericsson/log/assure_eps/ Â Inside this directory there is a list of directory with the following layoutÂ csl-1. Â review all files in all these direcotys and check for any errors or exceptions</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start="1438692419821" stop="1438692419821" status="passed">
+                            <name>Check all files for erroris:Â -rw-r--r--. 1 epsadmin epsadmin Â  Â  Â  0 Sep 10 13:05 csl-1-out.log-rw-r--r--. 1 epsadmin epsadmin Â  Â 1216 Sep 10 13:05 csl-1.process.57678-rw-r--r--. 1 epsadmin epsadmin Â  Â 1002 Sep 10 15:17 csl-1-err.log-rw-r--r--. 1 epsadmin epsadmin Â  Â 1216 Sep 10 15:17 csl-1.process.53890-rw-r--r--. 1 epsadmin epsadmin 3775571 Sep 11 09:01 csl-1.log</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL-Functional Checking error logs EPS instances"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.15"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419870" stop="1438692419872" status="broken">
+            <name>CSL-Functional Checking of assure_zookeeper logs for errors</name>
+            <title>CSL-Functional Checking of assure_zookeeper logs for errors</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Passed with exception**
+### Description
+&gt; CSL-Functional Checking of assure_zookeeper logs for errors.  This is to verify that there is no errors created while load is running
+
+### Comment
+&gt; Error seen in Assure_Zookeeper logs. Investigations suggest that these errors were due to network connectivity issues.
+&gt; 
+&gt; There were dropped events for the duration of the errors.
+&gt; 
+&gt; Jira  LITPCDS-6958 &amp; EQEV-17733 raised to track the issue.
+
+### Precondition
+&gt; Full load is running
+
+</description>
+            <failure>
+                <message>RuntimeException: Passed with exception</message>
+                <stack-trace>java.lang.RuntimeException: Passed with exception
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:85)
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:79)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTest(AllureManualAdaptor.java:72)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTests(AllureManualAdaptor.java:56)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateSuite(AllureManualAdaptor.java:48)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateXmlReport(AllureManualAdaptor.java:41)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.main(AllureManualAdaptor.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419870" stop="1438692419870" status="passed">
+                    <name>CSL-Functional Checking of assure_zookeeper logs for errors</name>
+                    <steps>
+                        <step start="1438692419870" stop="1438692419870" status="passed">
+                            <name>Login to the CSL blade. Â go to the following directory.Â /var/ericsson/log/assure_zookeeper</name>
+                        </step>
+                        <step start="1438692419870" stop="1438692419870" status="passed">
+                            <name>Check the following logs for errors. Â zookeeper.log Â zookeeper.out</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="issue" value="EQEV-17733"/>
+                <label name="testId" value="CSL-Functional Checking of assure_zookeeper logs for errors"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value="Error seen in Assure_Zookeeper logs. Investigations suggest that these errors were due to network connectivity issues.
+
+There were dropped events for the duration of the errors.
+
+Jira  LITPCDS-6958 &amp; EQEV-17733 raised to track the issue."/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.12"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419879" stop="1438692419879" status="passed">
+            <name>CSL-Functional.  Check the PM stream logs for errors</name>
+            <title>CSL-Functional.  Check the PM stream logs for errors</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Pass**
+### Description
+&gt; CSL-Functional.  Check the PM stream logs for errors
+
+### Precondition
+&gt; Full load must be running
+
+</description>
+            <steps>
+                <step start="1438692419879" stop="1438692419879" status="passed">
+                    <name>On the PM stream blade check the following directory. Â /var/ericsson/log/pmstream/default</name>
+                    <attachments/>
+                    <steps>
+                        <step start="1438692419879" stop="1438692419879" status="passed">
+                            <name>Check all logs for errors listed below</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start="1438692419879" stop="1438692419879" status="passed">
+                            <name>event-stream-terminator.log Â metrics-2014-09-10.0.csv Â metrics.csv</name>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL-Functional.  Check the PM stream logs for errors"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.13"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419888" stop="1438692419888" status="failed">
+            <name>CSL-Functional DDP and OSS Monitoring tool</name>
+            <title>CSL-Functional DDP and OSS Monitoring tool</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Fail**
+### Description
+&gt; CSL-Functional DDP and OSS Monitoring tool
+
+### Comment
+&gt; The DDP functionality failed. All the failure info can be found in the JIra EQEV-17777
+
+### Precondition
+&gt; Workload in running on deployment 
+
+</description>
+            <failure>
+                <message>AssertionError: Fail</message>
+                <stack-trace>java.lang.AssertionError: Fail
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:86)
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:79)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTest(AllureManualAdaptor.java:72)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTests(AllureManualAdaptor.java:56)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateSuite(AllureManualAdaptor.java:48)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateXmlReport(AllureManualAdaptor.java:41)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.main(AllureManualAdaptor.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419888" stop="1438692419888" status="passed">
+                    <name>CSL-Functional DDP and OSS Monitoring tool</name>
+                    <steps>
+                        <step start="1438692419888" stop="1438692419888" status="passed">
+                            <name>Verify Step description</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="issue" value="EQEV-17777"/>
+                <label name="testId" value="CSL-Functional DDP and OSS Monitoring tool"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value="The DDP functionality failed. All the failure info can be found in the JIra EQEV-17777"/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+                <label name="sprint" value="15.14"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419894" stop="1438692419894" status="pending">
+            <name>CSL RV-EQEV-16776_1</name>
+            <title>CSL-Robustness:Verify data loading on Network service restart</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Robustness**
+Component: **RV**
+### Description
+&gt; This test case is to verify that data loading resumes upon network service restart on CSL, PM and Topology blades.
+
+### Precondition
+&gt; CSL is installed, data loading is going on.
+
+</description>
+            <failure>
+                <message>No execution result defined in TMS</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419894" stop="1438692419894" status="passed">
+                    <name>1. Execute "service network stop"</name>
+                    <steps>
+                        <step start="1438692419894" stop="1438692419894" status="passed">
+                            <name>Verify data loading is stopped</name>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1438692419894" stop="1438692419894" status="passed">
+                    <name>Execute "service network start</name>
+                    <steps>
+                        <step start="1438692419894" stop="1438692419894" status="passed">
+                            <name>Verify data loading resumes.</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL RV-EQEV-16776_1"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="RV"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419902" stop="1438692419902" status="pending">
+            <name>CSL RV-EQEV-16776_2</name>
+            <title>CSL-Robustness-Verify boding behavior in CSL-M</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Robustness**
+Component: **RV**
+### Description
+&gt; This test case is to verify bonding behavior in CSL-M.  If user disable ETH0, data loading should continue on ETH1.
+
+### Precondition
+&gt; CSL is installed.
+&gt; Data loading is going on.
+
+</description>
+            <failure>
+                <message>No execution result defined in TMS</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419902" stop="1438692419902" status="passed">
+                    <name>Disable eth0</name>
+                    <steps>
+                        <step start="1438692419902" stop="1438692419902" status="passed">
+                            <name>Verify data loading continue on eth1</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSL RV-EQEV-16776_2"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="RV"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419907" stop="1438692419907" status="pending">
+            <name>CSLRV-EQEV-16776_3</name>
+            <title>CSL Robustness-Reboot of LMS and peer nodes</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-15427](EQEV-15427) 
+Type: **Robustness**
+Component: **RV**
+### Description
+&gt; This test case verifies that reboot of LMS and peer nodes does not have any adverse effect.All the services should come up properly after the servers are up again after reboot.
+
+</description>
+            <failure>
+                <message>No execution result defined in TMS</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419907" stop="1438692419907" status="passed">
+                    <name>Reboot LMS from the iLO console.</name>
+                    <steps>
+                        <step start="1438692419907" stop="1438692419907" status="passed">
+                            <name>Ensure the LMS is able to come up properly after reboot.Check the state of services on peer nodes by command &lt;hagrp -state&gt;.</name>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1438692419907" stop="1438692419907" status="passed">
+                    <name>Reboot CSL EPS from the iLO console.</name>
+                    <steps>
+                        <step start="1438692419907" stop="1438692419907" status="passed">
+                            <name>Ensure that CSL EPS server is able to come up properly after reboot.Check the state of services on peer nodes by command &lt;hagrp -state&gt;.</name>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1438692419907" stop="1438692419907" status="passed">
+                    <name>Reboot PM stream from the iLO console.</name>
+                    <steps>
+                        <step start="1438692419907" stop="1438692419907" status="passed">
+                            <name>Ensure the PM stream is able to come up properly after reboot.Check the state of services on peer nodes by command &lt;hagrp -state&gt;.</name>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1438692419907" stop="1438692419907" status="passed">
+                    <name>Reboot topology server from the iLO console.</name>
+                    <steps>
+                        <step start="1438692419907" stop="1438692419907" status="passed">
+                            <name>Ensure the PM stream is able to come up properly after reboot.Check the state of services on peer nodes by command &lt;hagrp -state&gt;.</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="CSLRV-EQEV-16776_3"/>
+                <label name="story" value="EQEV-15427: KDDI: CSL Mediation supporting 1250 eRBS"/>
+                <label name="feature" value="RV"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="minor"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419913" stop="1438692419913" status="pending">
+            <name>RV-CSL.  Snapshot recovery from Upgrade</name>
+            <title>RV-CSL.  Snapshot recovery from Upgrade</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-11604](EQEV-11604) 
+Type: **Functional**
+Component: **INFERNO**
+### Description
+&gt; RV-CSL.  Snapshot recovery from Upgrade
+&gt; 
+&gt; After upgrade of CSL (with error or without) you should be able to restore back to previous system using snapshot.
+
+### Precondition
+&gt; 4.1.9 or further releases required.
+&gt; 
+
+</description>
+            <failure>
+                <message>No execution result defined in TMS</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419913" stop="1438692419913" status="passed">
+                    <name>RV-CSL. Â Snapshot recovery from Upgrade</name>
+                    <steps>
+                        <step start="1438692419913" stop="1438692419913" status="passed">
+                            <name>After upgrade of CSL (with error or without) you should be able to restore back to previous system using snapshot.</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="RV-CSL.  Snapshot recovery from Upgrade"/>
+                <label name="story" value="EQEV-11604: null"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value=""/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+            </labels>
+        </test-case>
+        <test-case start="1438692419918" stop="1438692419918" status="failed">
+            <name>RV CSL regression of faults </name>
+            <title>EQEV-16503 EQEV-17160 EQEV-16474 EQEV-16500</title>
+            <description type="markdown">## Test Case
+Requirements: [EQEV-16503](EQEV-16503) 
+Type: **Functional**
+Component: **INFERNO**
+Execution Status: **Fail**
+### Description
+&gt; EQEV-16503 EQEV-17160 EQEV-16474 EQEV-16500 EQEV-17073
+
+### Comment
+&gt; EQEV-16503 - Not Observed in 4.1.10
+&gt; EQEV-17160 - 
+&gt; EQEV-16474 - Uncaught Exception Seen. Jira updated.
+&gt; EQEV-16500 - Re-Opened.
+
+### Precondition
+&gt; EQEV-16503 EQEV-17160 EQEV-16474 EQEV-16500 EQEV-17073
+
+</description>
+            <failure>
+                <message>AssertionError: Fail</message>
+                <stack-trace>java.lang.AssertionError: Fail
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:86)
+	at com.ericsson.cifwk.taf.allure.manual.AllureEventFactory.createTestCaseFailureEvent(AllureEventFactory.java:79)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTest(AllureManualAdaptor.java:72)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateTests(AllureManualAdaptor.java:56)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateSuite(AllureManualAdaptor.java:48)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.generateXmlReport(AllureManualAdaptor.java:41)
+	at com.ericsson.cifwk.taf.allure.manual.AllureManualAdaptor.main(AllureManualAdaptor.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1438692419918" stop="1438692419918" status="passed">
+                    <name>EQEV-16503 EQEV-17160 EQEV-16474 EQEV-16500</name>
+                    <steps>
+                        <step start="1438692419918" stop="1438692419918" status="passed">
+                            <name>EQEV-16503</name>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testId" value="RV CSL regression of faults "/>
+                <label name="story" value="EQEV-16503: null"/>
+                <label name="feature" value="INFERNO"/>
+                <label name="comment" value="EQEV-16503 - Not Observed in 4.1.10
+EQEV-17160 - 
+EQEV-16474 - Uncaught Exception Seen. Jira updated.
+EQEV-16500 - Re-Opened."/>
+                <label name="execution_type" value="manual"/>
+                <label name="severity" value="critical"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TAF"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

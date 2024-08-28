@@ -1,0 +1,42 @@
+.label-severity-blocker {
+    background-color: #D9534F;
+}
+.label-severity-critical {
+    background-color: #D9534F;
+}
+.label-severity-normal {
+    background-color: #F0AD4E;
+}
+.label-severity-minor {
+    background-color: #999999;
+}
+.label-severity-trivial {
+    background-color: #5CB85C;
+}
+
+.text-severity-blocker {
+    color: #D9534F;
+}
+.text-severity-critical {
+    color: #D9534F;
+}
+.text-severity-normal {
+    color: #F0AD4E;
+}
+.text-severity-minor {
+    color: #666666;
+}
+.text-severity-trivial {
+    color: #5CB85C;
+}
+.table-condensed > tbody > tr > td.suite-title {
+    padding-left: 20px;
+    font-style: italic;
+}
+.priority-icon {
+    width: 20px;
+    float: left;
+}
+.priority-icon + span {
+    clear: left;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1508775838228" stop="1508775840253" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Random Tests</name>
+    <title>Random Tests</title>
+    <test-cases>
+        <test-case start="1508775839058" stop="1508775840241" status="passed">
+            <name>no test ID provided</name>
+            <title>no test ID provided</title>
+            <steps>
+                <step start="1508775839058" stop="1508775839058" status="passed">
+                    <name>@BeforeSuite: init</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1508775839058" stop="1508775839058" status="passed">
+                    <name>@BeforeMethod: beforeMethod</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1508775839898" stop="1508775839924" status="passed">
+                    <name>createDatasource</name>
+                    <title>createDatasource[false]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1508775839936" stop="1508775839936" status="passed">
+                    <name>createDatasource</name>
+                    <title>createDatasource[true]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1508775839944" stop="1508775840181" status="passed">
+                    <name>testAllureKpiGenerationAddDatasourceToAllure</name>
+                    <title>allureKPIDatasource: testAllureKpiGenerationAddDatasourceToAllure[manualKpi]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="d9e42608-2314-4c1e-b463-60a6780ea818-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1508775840250" stop="1508775840250" status="passed">
+                    <name>@AfterSuite: teardown</name>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="10ad2066-4405-4889-9554-a7b276a5e175-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="IE00200530"/>
+                <label name="thread" value="Random Tests.1"/>
+                <label name="KPI::PM::1031330919:::Time to show in NBI" value="1s"/>
+                <label name="KPI::PM::1031330919:::AlarmId" value="11896"/>
+                <label name="KPI::PM::1031330919:::EventTime" value="2017-10-04 15:11:58"/>
+                <label name="KPI::PM::1031330919:::AcknowledgeTime" value="2017-10-04 15:11:59"/>
+                <label name="KPI::PM::1031330919:::TestRun" value="run1"/>
+                <label name="KPI::PM::1031330919:::Result" value="Passed"/>
+                <label name="KPI::PM::238606634:::Time to show in NBI" value="2s"/>
+                <label name="KPI::PM::238606634:::AlarmId" value="11897"/>
+                <label name="KPI::PM::238606634:::EventTime" value="2017-10-04 15:12:02"/>
+                <label name="KPI::PM::238606634:::AcknowledgeTime" value="2017-10-04 15:12:04"/>
+                <label name="KPI::PM::238606634:::TestRun" value="run2"/>
+                <label name="KPI::PM::238606634:::Result" value="Passed"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TAF"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,19 @@
+<div>
+    <h3 class="pane__header jenkinsLogsHeader">Test Executor Jenkins Logs</h3>
+</div>
+<p ng-show="errorMessage"><i class="text-muted">{{ errorMessage }}</i></p>
+<table ng-hide="errorMessage" allure-table class="jenkinsLogs-list table table-hover table-condensed" sorting="sorting">
+    <tbody>
+    <tr ng-repeat-start="logFile in exportData.items" class="jenkins-log-row" ng-class="{'active':logFile.name == $parent.logName}"       >
+        <td allure-table-col="{heading:'TE Log name', predicate: 'name', flex: 2}" class="line-ellipsis clickable" title="{{logFile.name}}"  ng-click="setLogName(logFile.name)">
+            {{logFile.name}}
+        </td>
+        <td allure-table-col="{heading:'Download', predicate: 'size', flex: 4}" class="line-ellipsis" title="Download {{logFile.name}}">
+            <a download="{{logFile.name}}" class="text-muted no-decoration" ng-href="{{getSourceUrl(logFile.name)}}">
+                <span class="fa fa-floppy-o " tooltip="Download"></span>
+                ({{logFile.size | filesize}})</a>
+        </td>
+    </tr>
+    <tr ng-repeat-end></tr>
+    </tbody>
+</table>

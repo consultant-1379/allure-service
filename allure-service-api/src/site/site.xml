@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Allure Service REST API Docs">
+    <bannerLeft>
+        <name>Allure Service</name>
+    </bannerLeft>
+    <publishDate position="right"/>
+    <bannerRight>
+        <src>https://taftm.seli.wh.rnd.internal.ericsson.com/login/resources/ericssonLogo_blue.svg</src>
+    </bannerRight>
+    <body>
+        <links>
+            <!-- header links specific to the documentation -->
+            <item name="Ericsson" href="http://www.ericsson.com/"/>
+        </links>
+        <menu name="API Documentation">
+            <item name="REST API" href="api.html" />
+        </menu>
+    </body>
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.6</version>
+    </skin>
+    <custom>
+        <fluidoSkin>
+            <skipGenerationDate>true</skipGenerationDate>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+        </fluidoSkin>
+    </custom>
+</project>

@@ -1,0 +1,8 @@
+{
+  "priorities": {
+    "TITLE": "Erros",
+    "HEADER": "Erros by priorities",
+    "STATISTIC": "{amount, plural, one{# erro} other{# erros}}",
+    "NO_DEFECTS": "Nenhum erro ao executar os testes. Bom trabalho!"
+  }
+}

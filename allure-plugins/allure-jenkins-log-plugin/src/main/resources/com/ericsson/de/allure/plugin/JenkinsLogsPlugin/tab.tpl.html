@@ -1,0 +1,14 @@
+<div class="jenkinsLogs b-island tab-content-fill" pane-set>
+    <div class="pane_col" pane pane-expanded="true" ng-class="{'pane_col-overlay': !isState('jenkins-logs')}">
+        <div class="pane_overlay clickable" ui-sref="jenkins-logs"></div>
+        <div class="pane_content">
+            <ng-include src="'plugins/jenkins-logs/overview.html'"></ng-include>
+        </div>
+    </div>
+    <div class="pane_col" pane ng-if="logName" pane-expanded="isState('jenkins-logs.detailed.expanded')">
+        <div class="pane_overlay clickable" ui-sref="jenkins-logs"></div>
+        <div class="pane_content">
+            <ng-include src="'plugins/jenkins-logs/detailed.html'"></ng-include>
+        </div>
+    </div>
+</div>

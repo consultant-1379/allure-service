@@ -1,0 +1,47 @@
+.label-teamname-failed {
+    background-color: #D9534F;
+}
+.label-teamname-canceled {
+    background-color: #6A6A6A;
+}
+.label-teamname-broken {
+    background-color: #F0AD4E;
+}
+.label-teamname-pending {
+    background-color: #999999;
+}
+.label-teamname-passed {
+    background-color: #5CB85C;
+}
+
+.text-teamname-failed {
+    background-color: #D9534F;
+}
+
+.text-teamname-total {
+    color: #0C0C0C;
+}
+
+.text-teamname-canceled {
+    background-color: #6A6A6A;
+}
+.text-teamname-broken {
+    background-color: #F0AD4E;
+}
+.text-teamname-pending {
+    background-color: #999999;
+}
+.text-teamname-passed {
+    background-color: #5CB85C;
+}
+.table-condensed > tbody > tr > td.suite-title {
+    padding-left: 20px;
+    font-style: italic;
+}
+.teamname-icon {
+    width: 20px;
+    float: left;
+}
+.teamname-icon + span {
+    clear: left;
+}

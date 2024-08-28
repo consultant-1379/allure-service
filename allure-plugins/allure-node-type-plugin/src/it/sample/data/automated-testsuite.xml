@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1507078685120" stop="1507079676546" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>CM Add and Synch Node GAT - Add and Sync Nodes</name>
+    <title>CM Add and Synch Node GAT - Add and Sync Nodes</title>
+    <test-cases>
+        <test-case start="1507078709658" stop="1507078741252" status="passed">
+            <name>Test_003 - Add and Sync Node SGSN</name>
+            <title>Test_003- Add and Sync Node SGSN</title>
+            <steps>
+                <step start="1507078709658" stop="1507078709658" status="passed">
+                    <name>@BeforeClass: setUp</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078709689" stop="1507078709776" status="passed">
+                    <name>login</name>
+                    <title>login[Data value: {lastName=admin, enabled=true, username=gatUser, email=admin@blah.ie, roles=ADMINISTRATOR, firstName=gat, password=TestPassw0rd}]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="068bf609-29c1-42d5-9b2a-aed03cf8bf1d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps>
+                        <step start="1507078709690" stop="1507078709776" status="passed">
+                            <name>loginToENM</name>
+                            <title>loginToENM[gatUser, TestPassw0rd]</title>
+                            <attachments>
+                                <attachment title="log.txt" source="3c70235c-c0e6-4d42-83b6-a09e74d143d4-attachment.txt" type="text/plain"/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1507078709799" stop="1507078710273" status="passed">
+                    <name>addNode</name>
+                    <title>addNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="de61cfed-a5e9-49d6-a8e9-b029e8517ae6-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710284" stop="1507078710443" status="passed">
+                    <name>confirmNodeAdded</name>
+                    <title>confirmNodeAdded[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="dfffa76a-754e-4d9a-a42f-2d42dfcdd94f-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710461" stop="1507078710634" status="passed">
+                    <name>addSecurityCredentialsToNode</name>
+                    <title>addSecurityCredentialsToNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="b3b9f603-aff5-461c-95f7-2a98a9345e2d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710653" stop="1507078710812" status="passed">
+                    <name>syncNode</name>
+                    <title>syncNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="87d9673d-48d7-4295-9ee9-e65757e9d707-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710841" stop="1507078741167" status="passed">
+                    <name>confirmNodeSynced</name>
+                    <title>confirmNodeSynced[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="fff7c4ec-a952-4f2d-8a96-967eea5f5a39-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078741180" stop="1507078741240" status="passed">
+                    <name>logout</name>
+                    <title>logout</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078741246" stop="1507078741246" status="passed">
+                    <name>close</name>
+                    <title>close</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="1b90c2ba-1ae0-49ec-ba28-a349d322b85b-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="tafexemb1"/>
+                <label name="thread" value="CM GAT - All Chapters.1"/>
+            </labels>
+            <parameters>
+                <parameter name="port" value="22" kind="argument"/>
+                <parameter name="normalUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpReadCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="ossPrefix" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="networkElementId" value="SGSN-16A-CP01-V101" kind="argument"/>
+                <parameter name="secureUserName" value="netsim" kind="argument"/>
+                <parameter name="platformType" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpWriteCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="normalUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="hostName" value="ieatnetsimv6013-09" kind="argument"/>
+                <parameter name="testCaseId" value="T001 - Add and Sync Node SGSN" kind="argument"/>
+                <parameter name="ossModelIdentity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="nodeType" value="SGSN-MME" kind="argument"/>
+                <parameter name="snmpVersion" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="transportType" value="SSH" kind="argument"/>
+                <parameter name="secureUserPassword" value="netsim" kind="argument"/>
+                <parameter name="ipAddress" value="10.138.128.195" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1507078709657" stop="1507078741251" status="passed">
+            <name>Test_004 - Add and Sync Node ERBS</name>
+            <title>Test_004 - Add and Sync Node ERBS</title>
+            <steps>
+                <step start="1507078709658" stop="1507078709658" status="passed">
+                    <name>@BeforeClass: setUp</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078709689" stop="1507078709776" status="passed">
+                    <name>login</name>
+                    <title>login[Data value: {lastName=admin, enabled=true, username=gatUser, email=admin@blah.ie, roles=ADMINISTRATOR, firstName=gat, password=TestPassw0rd}]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="068bf609-29c1-42d5-9b2a-aed03cf8bf1d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps>
+                        <step start="1507078709690" stop="1507078709776" status="passed">
+                            <name>loginToENM</name>
+                            <title>loginToENM[gatUser, TestPassw0rd]</title>
+                            <attachments>
+                                <attachment title="log.txt" source="3c70235c-c0e6-4d42-83b6-a09e74d143d4-attachment.txt" type="text/plain"/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1507078709799" stop="1507078710273" status="passed">
+                    <name>addNode</name>
+                    <title>addNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="de61cfed-a5e9-49d6-a8e9-b029e8517ae6-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710284" stop="1507078710443" status="passed">
+                    <name>confirmNodeAdded</name>
+                    <title>confirmNodeAdded[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="dfffa76a-754e-4d9a-a42f-2d42dfcdd94f-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710461" stop="1507078710634" status="passed">
+                    <name>addSecurityCredentialsToNode</name>
+                    <title>addSecurityCredentialsToNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="b3b9f603-aff5-461c-95f7-2a98a9345e2d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710653" stop="1507078710812" status="passed">
+                    <name>syncNode</name>
+                    <title>syncNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="87d9673d-48d7-4295-9ee9-e65757e9d707-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710841" stop="1507078741167" status="passed">
+                    <name>confirmNodeSynced</name>
+                    <title>confirmNodeSynced[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="fff7c4ec-a952-4f2d-8a96-967eea5f5a39-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078741180" stop="1507078741240" status="passed">
+                    <name>logout</name>
+                    <title>logout</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078741246" stop="1507078741246" status="passed">
+                    <name>close</name>
+                    <title>close</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="1b90c2ba-1ae0-49ec-ba28-a349d322b85b-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="tafexemb1"/>
+                <label name="thread" value="CM GAT - All Chapters.1"/>
+            </labels>
+            <parameters>
+                <parameter name="port" value="22" kind="argument"/>
+                <parameter name="normalUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpReadCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="ossPrefix" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="networkElementId" value="SGSN-16A-CP01-V101" kind="argument"/>
+                <parameter name="secureUserName" value="netsim" kind="argument"/>
+                <parameter name="platformType" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpWriteCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="normalUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="hostName" value="ieatnetsimv6013-09" kind="argument"/>
+                <parameter name="testCaseId" value="T001 - Add and Sync Node SGSN" kind="argument"/>
+                <parameter name="ossModelIdentity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="nodeType" value="ERBS" kind="argument"/>
+                <parameter name="snmpVersion" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="transportType" value="SSH" kind="argument"/>
+                <parameter name="secureUserPassword" value="netsim" kind="argument"/>
+                <parameter name="ipAddress" value="10.138.128.195" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1507078709657" stop="1507078741251" status="failed">
+            <name>Test_005 - Add and Sync Node SGSN</name>
+            <title>Test_005 - Add and Sync Node SGSN</title>
+            <steps>
+                <step start="1507078709658" stop="1507078709658" status="passed">
+                    <name>@BeforeClass: setUp</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078709689" stop="1507078709776" status="passed">
+                    <name>login</name>
+                    <title>login[Data value: {lastName=admin, enabled=true, username=gatUser, email=admin@blah.ie, roles=ADMINISTRATOR, firstName=gat, password=TestPassw0rd}]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="068bf609-29c1-42d5-9b2a-aed03cf8bf1d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps>
+                        <step start="1507078709690" stop="1507078709776" status="passed">
+                            <name>loginToENM</name>
+                            <title>loginToENM[gatUser, TestPassw0rd]</title>
+                            <attachments>
+                                <attachment title="log.txt" source="3c70235c-c0e6-4d42-83b6-a09e74d143d4-attachment.txt" type="text/plain"/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1507078709799" stop="1507078710273" status="passed">
+                    <name>addNode</name>
+                    <title>addNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="de61cfed-a5e9-49d6-a8e9-b029e8517ae6-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710284" stop="1507078710443" status="passed">
+                    <name>confirmNodeAdded</name>
+                    <title>confirmNodeAdded[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="dfffa76a-754e-4d9a-a42f-2d42dfcdd94f-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710461" stop="1507078710634" status="passed">
+                    <name>addSecurityCredentialsToNode</name>
+                    <title>addSecurityCredentialsToNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="b3b9f603-aff5-461c-95f7-2a98a9345e2d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710653" stop="1507078710812" status="passed">
+                    <name>syncNode</name>
+                    <title>syncNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="87d9673d-48d7-4295-9ee9-e65757e9d707-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710841" stop="1507078741167" status="passed">
+                    <name>confirmNodeSynced</name>
+                    <title>confirmNodeSynced[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="fff7c4ec-a952-4f2d-8a96-967eea5f5a39-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078741180" stop="1507078741240" status="passed">
+                    <name>logout</name>
+                    <title>logout</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078741246" stop="1507078741246" status="passed">
+                    <name>close</name>
+                    <title>close</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="1b90c2ba-1ae0-49ec-ba28-a349d322b85b-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="tafexemb1"/>
+                <label name="thread" value="CM GAT - All Chapters.1"/>
+            </labels>
+            <parameters>
+                <parameter name="port" value="22" kind="argument"/>
+                <parameter name="normalUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpReadCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="ossPrefix" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="networkElementId" value="SGSN-16A-CP01-V101" kind="argument"/>
+                <parameter name="secureUserName" value="netsim" kind="argument"/>
+                <parameter name="platformType" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpWriteCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="normalUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="hostName" value="ieatnetsimv6013-09" kind="argument"/>
+                <parameter name="testCaseId" value="T001 - Add and Sync Node SGSN" kind="argument"/>
+                <parameter name="ossModelIdentity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="nodeType" value="SGSN-MME" kind="argument"/>
+                <parameter name="snmpVersion" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="transportType" value="SSH" kind="argument"/>
+                <parameter name="secureUserPassword" value="netsim" kind="argument"/>
+                <parameter name="ipAddress" value="10.138.128.195" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1507078709657" stop="1507078741251" status="failed">
+            <name>Test_006 - Add and Sync Node SGSN</name>
+            <title>Test_006 - Add and Sync Node SGSN</title>
+            <steps>
+                <step start="1507078709658" stop="1507078709658" status="passed">
+                    <name>@BeforeClass: setUp</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078709689" stop="1507078709776" status="passed">
+                    <name>login</name>
+                    <title>login[Data value: {lastName=admin, enabled=true, username=gatUser, email=admin@blah.ie, roles=ADMINISTRATOR, firstName=gat, password=TestPassw0rd}]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="068bf609-29c1-42d5-9b2a-aed03cf8bf1d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps>
+                        <step start="1507078709690" stop="1507078709776" status="passed">
+                            <name>loginToENM</name>
+                            <title>loginToENM[gatUser, TestPassw0rd]</title>
+                            <attachments>
+                                <attachment title="log.txt" source="3c70235c-c0e6-4d42-83b6-a09e74d143d4-attachment.txt" type="text/plain"/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1507078709799" stop="1507078710273" status="passed">
+                    <name>addNode</name>
+                    <title>addNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="de61cfed-a5e9-49d6-a8e9-b029e8517ae6-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710284" stop="1507078710443" status="passed">
+                    <name>confirmNodeAdded</name>
+                    <title>confirmNodeAdded[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="dfffa76a-754e-4d9a-a42f-2d42dfcdd94f-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710461" stop="1507078710634" status="passed">
+                    <name>addSecurityCredentialsToNode</name>
+                    <title>addSecurityCredentialsToNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="b3b9f603-aff5-461c-95f7-2a98a9345e2d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710653" stop="1507078710812" status="passed">
+                    <name>syncNode</name>
+                    <title>syncNode[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="87d9673d-48d7-4295-9ee9-e65757e9d707-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078710841" stop="1507078741167" status="passed">
+                    <name>confirmNodeSynced</name>
+                    <title>confirmNodeSynced[Data value: {port=22, normalUserPassword=null, snmpReadCommunity=null, rootUserPassword=null, ossPrefix=null, networkElementId=SGSN-16A-CP01-V101,...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="fff7c4ec-a952-4f2d-8a96-967eea5f5a39-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start="1507078741180" stop="1507078741240" status="passed">
+                    <name>logout</name>
+                    <title>logout</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1507078741246" stop="1507078741246" status="passed">
+                    <name>close</name>
+                    <title>close</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="1b90c2ba-1ae0-49ec-ba28-a349d322b85b-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="tafexemb1"/>
+                <label name="thread" value="CM GAT - All Chapters.1"/>
+            </labels>
+            <parameters>
+                <parameter name="port" value="22" kind="argument"/>
+                <parameter name="normalUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpReadCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserPassword" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="ossPrefix" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="networkElementId" value="SGSN-16A-CP01-V101" kind="argument"/>
+                <parameter name="secureUserName" value="netsim" kind="argument"/>
+                <parameter name="platformType" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="snmpWriteCommunity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="normalUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="rootUserName" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="hostName" value="ieatnetsimv6013-09" kind="argument"/>
+                <parameter name="testCaseId" value="T001 - Add and Sync Node SGSN" kind="argument"/>
+                <parameter name="ossModelIdentity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="nodeType" value="SGSN-MME" kind="argument"/>
+                <parameter name="snmpVersion" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="transportType" value="SSH" kind="argument"/>
+                <parameter name="secureUserPassword" value="netsim" kind="argument"/>
+                <parameter name="ipAddress" value="10.138.128.195" kind="argument"/>
+            </parameters>
+        </test-case>
+        <test-case start="1507078836725" stop="1507079422753" status="broken">
+            <name>Test_007 - Add and Sync Node MiniLinkOutdoor-6352</name>
+            <title>Test_007 - Add and Sync Node MiniLinkOutdoor-6352</title>
+            <failure>
+                <message>NodeIntegrationOperatorException: Node CORE42ML03 failed to update syncStatus to SYNCHRONIZED within 600.00 seconds, current status [PENDING]</message>
+                <stack-trace>com.ericsson.oss.testware.nodeintegration.exceptions.NodeIntegrationOperatorException: Node CORE42ML03 failed to update syncStatus to SYNCHRONIZED within 600.00 seconds, current status [PENDING]
+                    at com.ericsson.oss.testware.nodeintegration.operators.impl.NodeIntegrationOperatorBase.waitForSyncStatus(NodeIntegrationOperatorBase.java:151)
+                    at com.ericsson.oss.testware.nodeintegration.operators.impl.NodeIntegrationOperatorBase.waitForSyncToComplete(NodeIntegrationOperatorBase.java:133)
+                    at com.ericsson.oss.testware.nodeintegration.operators.impl.NodeIntegrationOperatorBase.waitForSync(NodeIntegrationOperatorBase.java:162)
+                    at com.ericsson.oss.testware.nodeintegration.operators.impl.NodeIntegrationOperatorMLBase.waitForSyncToComplete(NodeIntegrationOperatorMLBase.java:56)
+                    at com.ericsson.oss.testware.nodeintegration.operators.impl.NodeIntegrationOperatorImpl.waitForSyncToComplete(NodeIntegrationOperatorImpl.java:102)
+                    at com.ericsson.oss.testware.nodeintegration.teststeps.NodeIntegrationTestSteps.confirmNodeSynced(NodeIntegrationTestSteps.java:189)
+                    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+                    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+                    at java.lang.reflect.Method.invoke(Method.java:601)
+                    at com.ericsson.cifwk.taf.scenario.impl.MethodInvocation.execute(MethodInvocation.java:148)
+                    at com.ericsson.cifwk.taf.scenario.impl.MethodInvocation.run(MethodInvocation.java:107)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.runTestStep(TestStepRunner.java:309)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.runTestStepAndHandleExceptions(TestStepRunner.java:272)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.runAllTestSteps(TestStepRunner.java:256)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.runSequenceOfSteps(TestStepRunner.java:218)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.performTestSteps(TestStepRunner.java:181)
+                    at com.ericsson.cifwk.taf.scenario.impl.TestStepRunner.call(TestStepRunner.java:131)
+                    at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+                    at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+                    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+                    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+                    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+                    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+                    at java.lang.Thread.run(Thread.java:722)
+                </stack-trace>
+            </failure>
+            <steps>
+                <step start="1507078836744" stop="1507078836799" status="passed">
+                    <name>login</name>
+                    <title>login[Data value: {lastName=admin, enabled=true, username=gatUser, email=admin@blah.ie, roles=ADMINISTRATOR, firstName=gat, password=TestPassw0rd}]</title>
+                    <attachments>
+                        <attachment title="log.txt" source="e324e6df-0339-4060-8770-57d6968756d9-attachment.txt" type="text/plain"/>
+                    </attachments>
+                    <steps>
+                        <step start="1507078836744" stop="1507078836798" status="passed">
+                            <name>loginToENM</name>
+                            <title>loginToENM[gatUser, TestPassw0rd]</title>
+                            <attachments>
+                                <attachment title="log.txt" source="e060bd8d-8ff2-49cd-96ec-b864ed117373-attachment.txt" type="text/plain"/>
+                            </attachments>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1507078836817" stop="1507078837232" status="passed">
+                    <name>addNode</name>
+                    <title>addNode[Data value: {port=null, normalUserPassword=Enmguest@12345, snmpReadCommunity=public, rootUserPassword=authpassword, ossPrefix=MeContext=CORE42ML03...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="0ea4f5e2-9a44-4ed6-a7bd-7f149649cac4-attachment.txt" type="text/plain"/>
+                    </attachments>
+                </step>
+                <step start="1507078837246" stop="1507078837400" status="passed">
+                    <name>confirmNodeAdded</name>
+                    <title>confirmNodeAdded[Data value: {port=null, normalUserPassword=Enmguest@12345, snmpReadCommunity=public, rootUserPassword=authpassword, ossPrefix=MeContext=CORE42ML03...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="345f5b3c-24aa-4c31-87be-737c2f4ea0d1-attachment.txt" type="text/plain"/>
+                    </attachments>
+                </step>
+                <step start="1507078837418" stop="1507078837570" status="passed">
+                    <name>addSecurityCredentialsToNode</name>
+                    <title>addSecurityCredentialsToNode[Data value: {port=null, normalUserPassword=Enmguest@12345, snmpReadCommunity=public, rootUserPassword=authpassword, ossPrefix=MeContext=CORE42ML03...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="d8a7c0ee-9bf7-4dd6-b465-66bf28248d8d-attachment.txt" type="text/plain"/>
+                    </attachments>
+                </step>
+                <step start="1507078837589" stop="1507078837743" status="passed">
+                    <name>syncNode</name>
+                    <title>syncNode[Data value: {port=null, normalUserPassword=Enmguest@12345, snmpReadCommunity=public, rootUserPassword=authpassword, ossPrefix=MeContext=CORE42ML03...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="0ae30511-8db8-4f70-9f37-9d608f51fc6c-attachment.txt" type="text/plain"/>
+                    </attachments>
+                </step>
+                <step start="1507078837755" stop="1507079422729" status="broken">
+                    <name>confirmNodeSynced</name>
+                    <title>confirmNodeSynced[Data value: {port=null, normalUserPassword=Enmguest@12345, snmpReadCommunity=public, rootUserPassword=authpassword, ossPrefix=MeContext=CORE42ML03...</title>
+                    <attachments>
+                        <attachment title="log.txt" source="cf4ed237-02eb-4734-939f-ad224c6b55f3-attachment.txt" type="text/plain"/>
+                    </attachments>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title="log.txt" source="58eec287-9b9e-47cf-b768-f12600f04f6f-attachment.txt" type="text/plain"/>
+            </attachments>
+            <labels>
+                <label name="host" value="tafexemb1"/>
+                <label name="thread" value="CM GAT - All Chapters.1"/>
+            </labels>
+            <parameters>
+                <parameter name="port" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="normalUserPassword" value="Enmguest@12345" kind="argument"/>
+                <parameter name="snmpReadCommunity" value="public" kind="argument"/>
+                <parameter name="rootUserPassword" value="authpassword" kind="argument"/>
+                <parameter name="ossPrefix" value="MeContext=CORE42ML03" kind="argument"/>
+                <parameter name="networkElementId" value="CORE42ML03" kind="argument"/>
+                <parameter name="secureUserName" value="admin" kind="argument"/>
+                <parameter name="platformType" value="MINI-LINK-Outdoor" kind="argument"/>
+                <parameter name="snmpWriteCommunity" value="public" kind="argument"/>
+                <parameter name="normalUserName" value="enmguest" kind="argument"/>
+                <parameter name="rootUserName" value="admin" kind="argument"/>
+                <parameter name="hostName" value="ieatnetsimv6013-08" kind="argument"/>
+                <parameter name="testCaseId" value="T005 - Add and Sync Node MiniLinkOutdoor-6352" kind="argument"/>
+                <parameter name="ossModelIdentity" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="nodeType" value="MINI-LINK-6352" kind="argument"/>
+                <parameter name="snmpVersion" value="SNMP_V2C" kind="argument"/>
+                <parameter name="transportType" value="&lt;null&gt;" kind="argument"/>
+                <parameter name="secureUserPassword" value="authpassword" kind="argument"/>
+                <parameter name="ipAddress" value="10.138.113.30" kind="argument"/>
+            </parameters>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TAF"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
